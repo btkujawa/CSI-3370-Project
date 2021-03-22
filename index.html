@@ -31,10 +31,16 @@
     
     <style>
     
-    body{
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-    }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+        
+        .formalign{
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        
     
     </style>
 
@@ -75,12 +81,17 @@
             </div>            
         </div>
     </div>
+    <form class="formalign">
+    <input type="file" id="myFile" name="filename">
+    <input type="submit">
+    </form>
     <div class="container d-flex align-items-right flex-row flex-grow-1">
         <div class="container mx-5" id="mainCanvasContainer">
 
         </div>
         
     </div>
+    
 </body>
 
 </html>
