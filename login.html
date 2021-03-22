@@ -9,6 +9,25 @@
         
         .login{
             text-align: center;
+            padding: 200px;
+        }
+        
+        .field{
+            font-size: 24px;
+        }
+        
+        .resize{
+            font-style: bold;
+            font-size: 24px;
+        }
+        
+        .center{
+            text-align: center;
+        }
+        
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
         }
         
         </style>
@@ -24,21 +43,20 @@
     </ul>
     </nav>
 
-    <body>
-    <h2 style="text-align: center">Login/Register</h2><br>    
-    <div class="Login"> 
+    <body>    
+    <div class="Login">
+    <h1 class="center">Login/Register</h1><br>  
 
      <form id="Login"> 
 
-        <label><b>Username:</b>    
-        </label>
+        <label class="resize">Username:</label>
     
-        <input type="text" placeholder="Username" required> 
+        <input class="field" type="text" required> 
         
         <br><br>    
 
-        <label><b>Password:</b></label>    
-        <input type="Password" placeholder="Password" required> 
+        <label class="resize">Password:</label>    
+        <input class="field" type="Password" required> 
         
         <br><br>      
 
