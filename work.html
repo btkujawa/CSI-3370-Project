@@ -1,18 +1,120 @@
 <html>
 
-    
-    <head>
-    
+
+<head>
     <link rel="stylesheet" href="nav.css">
-    </head>
-    
-    <nav>
+</head>
+
+<nav>
     <ul>
         <li><a href="login.html">Login</a></li>
         <li><a href="AboutUs.html">About Us</a></li>
-        <li><a class = "active" href="work.html">Saved Work</a></li>
+        <li><a class="active" href="work.html">Saved Work</a></li>
         <li><a href="index.html">Home</a></li>
     </ul>
-    </nav>
+</nav>
+
+<style>
+  .file-upload{
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+  }
+  .input{
+    display: none;
+  }
+  .upload-button{
+    -webkit-appearance: none;
+    background: grey;
+    border: 2px solid grey;
+    outline: none;
+    border-radius: 5px;
+    padding: 0.5em 0.8em;
+    margin-right: 15px;
+    color: #ffffff;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .upload-button:active{
+    background: green;
+  }
+  .file-file-label{
+    max-width: 250px;
+    font-size: 0.95px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+
+</style>
+<body>
+  
+    <div class="file-upload">
+      <input class="input" type="file" name = "inputFile" id = "inFile" single>
+      <button class="upload-button" type="button">Upload a Document</button>
+      <!-- <span class="file-label"></span> -->
+      
+  
+  </div>
+  <script>
+    Array.prototype.forEach.call(document.querySelectorAll('.upload-button'), function(button){
+      const hiddenInput = button.parentElement.querySelector('.input');
+      // const label = button.parentElement.querySelector('.file-label');
+      // const defaultLabel = 'No file selected';
+
+      // label.textContent = defaultLabel;
+      // label.title = defaultLabel;
+
+
+
+      button.addEventListener('click',function(){
+        hiddenInput.click();
+      });
+      hiddenInput.addEventListener('change',function(){
+        let file = this.files[0];
+        let fileName = file.name;
+        let fileItem = {
+        'file': file,
+        'cover': ''
+        }
+        let reader = new FileReader();
+          reader.readAsDataURL(file);
+          reader.onload = function() {
+            fileItem.cover = this.result;
+            fileList[fileName] = fileItem;
+            formData.append(fileName, file);
+            showFile(fileName, true);
+          }
+
+        // const filename = Array.prototype.map.call(hiddenInput.file,function(file){
+        //   return file.name;
+        });
+        // label.textContent = filename.join(',')|| defaultLabel;
+        // label.title=label.textContent;
+      });
+      
+      
+      function showFile(fileName, isImg) {
+
+      }
+      function openFile(fileName){
+        let file = document.querySelector(`[key="${fileName}"]`);
+        if (file !== null) {
+          open(fileList[fileName]);
+          file.style.display="inline";
+        }
+      }
+
+
+
     
+  </script>
+  
+
+</body>
+
+
 </html>
