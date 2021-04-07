@@ -10,7 +10,7 @@ let colorSelector = function () {
         "#87CEEB", "#00008B", "#0000CD", "#4682B4",
         "#4169E1", "#000080"], ["#8A2BE2", "#8B008B",
         "#9932CC", "#9400D3", "#4B0082", "#800080",
-        "#FF69B4", "#FF00FF", "#C71585", "#EE82EE"]]
+        "#FF69B4", "#FF00FF", "#C71585", "#EE82EE"]]        
 
     colorsList.forEach(function (number, index) {
         var row = colors.insertRow(index);

@@ -1,0 +1,11 @@
+#mainContent {
+    padding-left: 20rem;
+  }
+  
+  #toolbox {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    height: 100%;
+    width: 20rem;
+  }

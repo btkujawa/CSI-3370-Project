@@ -1,6 +1,7 @@
 let mainCanvasOBJ = function (p) {
     var mode = "marker";
     var backgroundColor = 240;
+    var input;
     let mx, my;
     let sf = 1;
 
@@ -23,6 +24,17 @@ let mainCanvasOBJ = function (p) {
             g = document.getElementById("colorG").value
             b = document.getElementById("colorB").value
             p.stroke(r, g, b);
+        }
+        else if (mode == "highlighter") {
+            r = document.getElementById("colorR").value
+            g = document.getElementById("colorG").value
+            b = document.getElementById("colorB").value
+            p.stroke(r, g, b,10);
+        }
+        else if (mode == "textbox") {
+            input = p.creatInput();
+
+            input.changed(newText);
         }
         var ellW = document.getElementById("myRange").value;
         p.strokeWeight(ellW*sf);
@@ -77,6 +89,15 @@ let mainCanvasOBJ = function (p) {
 
     p.selectEraser = function () {
         mode = "eraser";
+    };
+    p.selectHighlighter = function () {
+        mode = "highlighter";
+    };
+    p.selectTextBox = function () {
+        mode = "textbox";
+    };
+    p.saveWorkLocal = function () {
+        p.saveCanvas('drawing.jpg');
     };
 
 }
