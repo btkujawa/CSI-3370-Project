@@ -19,9 +19,9 @@ li a{
 }
 
 li a:hover{
-    background-color: #5e92f3;
+    background-color: #7B9EBE;
 }
 
 .active{
-    background-color: #1565c0;
+    background-color: #7B9EBE;
 }
