@@ -2,7 +2,7 @@
 <html>
  
     <head>
-    
+    <link rel="shortcut icon" href="../assets/icons/Portray_Favicon.png">
     <link rel="stylesheet" href="/css/about.css">
     <link rel="stylesheet" href="/css/nav.css">
     <title>Portray - About Us</title>
@@ -21,7 +21,7 @@
         
     <div class="column">
         <div class="card">
-            <img src="images/Brandon%20Kujawa" width = "300px" height="300px" class="center">
+            <img src="/images/Brandon Kujawa.png" width = "300px" height="300px" class="center">
             <div class="container">
                 <h2>Brandon Kujawa</h2>
                 <p class="title">Scrum Master and Developer</p>
@@ -33,7 +33,7 @@
         
     <div class="column">
         <div class="card">
-            <img src="images/Nicholas%20Kramer%20-%20Professional.PNG" width="300px" height="300px" class="center">
+            <img src="../images/Nicholas Kramer - Professional.PNG" width="300px" height="300px" class="center">
             <div class="container">
                 <h2>Nicholas Kramer</h2>
                 <p class="title">Product Owner and Developer</p>
@@ -45,7 +45,7 @@
         
     <div class="column">
         <div class="card">
-            <img src="images/Tommy%20Jaboro.PNG" width="300px" height="300px" class="center">
+            <img src="../images/Tommy Jaboro.PNG" width="300px" height="300px" class="center">
             <div class="container">
                 <h2>Tommy Jaboro</h2>
                 <p class="title">Developer</p>
@@ -57,7 +57,7 @@
             
     <div class="column">
         <div class="card">
-            <img src="images/Matt%20Jackson" width="300px" height="300px" class="center">
+            <img src="../images/Matt Jackson.png" width="300px" height="300px" class="center">
             <div class="container">
                 <h2>Matt Jackson</h2>
                 <p class="title">Developer</p>
@@ -69,7 +69,7 @@
         
     <div class="column">
         <div class="card">
-            <img src="images/Ya%20Li" width = "300px" height="300px" class="center">
+            <img src="../images/Ya Li.png" width = "300px" height="300px" class="center">
             <div class="container">
                 <h2>Ya Li</h2>
                 <p class="title">Developer</p>
@@ -81,7 +81,7 @@
         
     <div class="column">
         <div class="card">
-            <img src="images/Michael%20Lee" width = "300px" height="300px" class="center">
+            <img src="../images/Michael Lee.png" width = "300px" height="300px" class="center">
             <div class="container">
                 <h2>Michael Lee</h2>
                 <p class="title">Developer</p>

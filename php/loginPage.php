@@ -1,39 +1,77 @@
 <?php
 session_start();
 ?>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../assets/icons/Portray_Favicon.png">
     <script src="/js/loginUser.js"></script>
-    <title>Sign In</title>
+    <script src="/js/goToRegPage.js"></script>
+    <link rel="stylesheet" href="/css/nav.css">
+    <title>Portray - Login</title>
+
+    <style>
+        .login {
+            text-align: center;
+            padding: 200px;
+            color: white;
+        }
+
+        .field {
+            font-size: 30px;
+        }
+
+        .resize {
+            font-style: bold;
+            font-size: 30px;
+            color: white;
+
+        }
+
+        .center {
+            text-align: center;
+            font-size: 42px;
+            color: white;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #1565c0;
+        }
+
+        .card {
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 1.0);
+            margin: 8px;
+            padding: 4px;
+            background-color: #003c8f;
+        }
+    </style>
+    <?php include 'navbar.php'; ?>
 </head>
 
-<body class="text-center" style="background-color: #004ba0;">
-    <div class="d-flex h-75" >
-        <div class="container d-flex flex-column justify-content-center align-items-center" style="margin-top: 10px; padding: 5px;" id="createUserDiv">
-            <a class="title-brand" href="/index.php" id="logo" style="font-size: xx-large; color: #63a4ff">Portray</a>
-            <div class="d-flex align-items-center flex-column flex-grow-1 pl-5 pr-5 pt-3 text-white-50 rounded box-shadow" style="background-color: #63a4ff;">
-                <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
-                <div class="d-flex align-items-center flex-column flex-grow-1 text-white-50 rounded box-shadow">
-                    <form>
-                        <div class="form-group">
-                            <label for="formGroupExampleInput">Username</label>
-                            <input type="text" class="form-control" id="user_name" placeholder="Username" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="formGroupExampleInput2">Password</label>
-                            <input type="password" class="form-control" id="user_password" placeholder="Password" required>
-                        </div>
-                        <button class="btn btn-primary" type="button" role="button" id="loginUserButton" onclick="loginUser()">Sign in</button>
-                </div>
-                <h3 class="h3 mb-3 font-weight-normal" id="createUserP"></h3>
-            </div>
+<body>
+    <div class="Login center">
+        <div class="card">
+            <h1 class="center">Login</h1>
+
+            <form id="Login">
+
+                <label class="resize">Username:</label>
+
+                <input class="field" id="user_name" type="text" required>
+
+                <br>
+
+                <label class="resize">Password:</label>
+                <input class="field" id="user_password" type="Password" required>
+
+                <br>
+
+                <button class=loginButton id="loginUserButton" onclick="loginUser()">Login</button>
+                <button id=register class=registerButton onclick="goToRegPage()">Register</button>
+
+            </form>
         </div>
     </div>
 </body>

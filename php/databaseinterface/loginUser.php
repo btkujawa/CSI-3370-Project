@@ -12,7 +12,7 @@ if (array_key_exists('user_name', $_POST) && array_key_exists('user_password', $
     $row = mysqli_fetch_assoc($result);
     $databasePassword = $row['login_password'];
     if ($user_password == $databasePassword) {
-        $sql = "SELECT 'user_id', login_username FROM user_login_info WHERE login_username = '$user_name';";
+        $sql = "SELECT user_id, login_username FROM user_login_info WHERE login_username = '$user_name';";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
         $_SESSION['userid'] = $row['user_id'];
